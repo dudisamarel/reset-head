@@ -24,8 +24,8 @@ You can use the built-in `GITHUB_TOKEN` secret, however, you have to grant write
 
 # Configuration
 
-| input       | description                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| branch-name | **required**. The name of the branch to reset.                                                     |
-| token       | **optional**. A GitHub secret token, the action defaults to using the special secrets.GITHUB_TOKEN |
-| head        | **optional**. The commit or tag to reset the branch to. Default `$GITHUB_REF_NAME`                 |
+| input       | description                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------- |
+| branch-name | **required**. The name of the branch to reset.                                                           |
+| token       | **optional**. A GitHub secret token, the action defaults to using the the built-in `GITHUB_TOKEN` secret |
+| head        | **optional**. The commit or tag to reset the branch to. Default `$GITHUB_REF_NAME`                       |
