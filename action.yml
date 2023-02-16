@@ -1,0 +1,39 @@
+name: Reset branch head to certain HEAD (commit or tag)
+description: Resetting hard branch to certain HEAD
+inputs:
+  branch-name:
+    required: true
+    description: "The name of the branch to reset."
+  github-secret:
+    required: true
+    description: "GitHub personal access token with repo access."
+  head:
+    required: true
+    description: "The commit or tag to reset the branch to."
+    default: "$GITHUB_REF_NAME"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - name: Set git configuration
+      run: |
+        git config --global user.name github-actions[bot]
+        git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+      shell: bash
+
+    - name: Set git remote URL
+      run: |
+        git remote set-url origin https://x-access-token:${{ inputs.github-secret }}@github.com/${{ github.repository }}
+      shell: bash
+
+    - name: Create new branch and reset to specified commit
+      run: |
+        git checkout -b "${{ inputs.branch-name }}"
+        git reset --hard ${{ inputs.head }}
+      shell: bash
+
+    - name: Force-push changes
+      run: |
+        git push --force origin "${{ inputs.branch-name }}"
+      shell: bash
+
