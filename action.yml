@@ -1,5 +1,8 @@
 name: Reset branch head to certain HEAD (commit or tag)
 description: Resetting hard branch to certain HEAD
+branding:
+  icon: git-pull-request
+  color: red
 inputs:
   branch-name:
     required: true
