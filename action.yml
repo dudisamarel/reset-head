@@ -1,4 +1,4 @@
-name: Reset branch head to certain HEAD (commit or tag)
+name: Reset head
 description: Resetting hard branch to certain HEAD
 branding:
   icon: git-pull-request
