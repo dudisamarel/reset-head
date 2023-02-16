@@ -20,13 +20,13 @@ You can use the built-in `GITHUB_TOKEN` secret, however, you have to grant write
 - uses: dudisamarel/reset-head@v1.0.0-beta
   with:
     branch-name: develop
-    github-secret: ${{ secrets.GITHUB_TOKEN }}
+    token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 # Configuration
 
-| input       | description                                                                        |
-| ----------- | ---------------------------------------------------------------------------------- |
-| token       | **required**. GitHub personal access token with repo write permission.             |
-| branch-name | **required**. The name of the branch to reset.                                     |
-| head        | **optional**. The commit or tag to reset the branch to. Default `$GITHUB_REF_NAME` |
+| input       | description                                                                                                                                  |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| branch-name | **required**. The name of the branch to reset.                                                                                               |
+| token       | **optional**. GitHub personal access token with repo write permission. required if you are not using use the built-in `GITHUB_TOKEN` secret. |
+| head        | **optional**. The commit or tag to reset the branch to. Default `$GITHUB_REF_NAME`                                                           |

@@ -8,8 +8,7 @@ inputs:
     required: true
     description: "The name of the branch to reset."
   token:
-    required: true
-    description: "GitHub personal access token with repo access."
+    description: "GitHub personal access token with repo write permission."
   head:
     description: "The commit or tag to reset the branch to."
     default: "$GITHUB_REF_NAME"
