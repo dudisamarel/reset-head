@@ -7,11 +7,10 @@ inputs:
   branch-name:
     required: true
     description: "The name of the branch to reset."
-  github-secret:
+  token:
     required: true
     description: "GitHub personal access token with repo access."
   head:
-    required: true
     description: "The commit or tag to reset the branch to."
     default: "$GITHUB_REF_NAME"
 runs:
@@ -39,4 +38,3 @@ runs:
       run: |
         git push --force origin "${{ inputs.branch-name }}"
       shell: bash
-
