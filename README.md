@@ -3,7 +3,7 @@ Resetting hard branch to certain HEAD
 
 # Usage
 ```
-- uses: actions/reset-head
+- uses: dudisamarel/reset-head@v1.0.0-beta
   with:
      branch-name: staging
      github-secret: ${{ secrets.GITHUB_TOKEN }}
