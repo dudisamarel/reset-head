@@ -17,7 +17,7 @@ You can use the built-in `GITHUB_TOKEN` secret, however, you have to grant write
 # Usage
 
 ```
-- uses: dudisamarel/reset-head@v1.0.0-beta
+- uses: dudisamarel/reset-head@v1
   with:
     branch-name: develop
 ```
