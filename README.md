@@ -5,6 +5,6 @@ Resetting hard branch to certain HEAD
 ```
 - uses: dudisamarel/reset-head@v1.0.0-beta
   with:
-     branch-name: staging
-     github-secret: ${{ secrets.GITHUB_TOKEN }}
+    branch-name: develop
+    github-secret: ${{ secrets.GITHUB_TOKEN }}
 ```
