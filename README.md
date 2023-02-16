@@ -20,7 +20,6 @@ You can use the built-in `GITHUB_TOKEN` secret, however, you have to grant write
 - uses: dudisamarel/reset-head@v1.0.0-beta
   with:
     branch-name: develop
-    token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 # Configuration
