@@ -1,7 +1,3 @@
-# Reset Head
-
-Resetting hard branch to certain HEAD
-
 # Before you start
 
 `reset-head` requires a GitHub token with write permission.
